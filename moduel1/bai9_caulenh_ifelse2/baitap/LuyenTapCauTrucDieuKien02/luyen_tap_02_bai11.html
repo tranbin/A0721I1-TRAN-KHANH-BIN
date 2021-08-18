@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11-Tính Thuế</title>
+</head>
+<body>
+    <script>
+        alert("Muốn tính thuế thu nhập phải nộp bạn phải có TN tính thuế TNCN nhân với Thuế suất");
+        alert("Thuế TNCN ĐƯỢC TÍNH BẰNG TỔNG THU NHẬP - TỔNG CÁC KHOẢN GIẢM TRỪ");
+        alert("Thuế suất tùy theo thu nhập năm bạn làm ra được và được tính theo các tỉ lệ khác nhau")
+        let tongthunhap = parseInt(prompt("Nhập tổng thu nhập tháng của bạn vào đây !"));
+        let tongcackhoanggiamtru = parseInt(prompt("Nhập tổng các khoảng giảm trừ của bạn vào đây !"));
+        let tncn = parseInt(tongthunhap) - parseInt(tongcackhoanggiamtru);
+        alert(tncn);
+        let thuesuat1 = tongthunhap*0.05;
+        let thuesuat2 = tongthunhap*0.1;
+        let thuesuat3 = tongthunhap*0.15;
+        let thuesuat4 = tongthunhap*0.2;
+        let thuesuat5 = tongthunhap*0.25;
+        let thuesuat6 = tongthunhap*0.3;
+        let thuesuat7 = tongthunhap*0.35;
+        let thuethunhap1 = parseInt(tncn) * parseInt(thuesuat1) ;
+        let thuethunhap2 = parseInt(tncn) * parseInt(thuesuat2) ;
+        let thuethunhap3 = parseInt(tncn) * parseInt(thuesuat3) ;
+        let thuethunhap4 = parseInt(tncn) * parseInt(thuesuat4) ;
+        let thuethunhap5 = parseInt(tncn) * parseInt(thuesuat5) ;
+        let thuethunhap6 = parseInt(tncn) * parseInt(thuesuat6) ;
+        let thuethunhap7 = parseInt(tncn) * parseInt(thuesuat7) ;
+       if(tongthunhap < 60000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap1)
+       }else if (tongthunhap <120000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap2)
+       }else if (tongthunhap <216000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap3)
+       }else if (tongthunhap <384000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap4)
+       }else if (tongthunhap <624000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap5)
+       }else if (tongthunhap <960000000){
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap6)
+       }else{
+           alert("Thuế thu nhập của bạn phải nộp là  : " +thuethunhap7)
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+
+<body>
+    <h1>In Hinh Trai Tim</h1>
+    <script>
+        let a, b;
+        let size = 6;
+        for (a = size / 2; a <= size; a = a + 2) {
+            for (b = 1; b < size - a; b = b + 2) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (b = 1; b <= a; b++) {
+                document.write("*");
+            }
+
+            for (b = 1; b <= size - a; b++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (b = 1; b <= a; b++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        for (a = size; a >= 0; a--) {
+            for (b = a; b <= size; b++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (b = 1; b <= ((a * 2) - 3); b++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>

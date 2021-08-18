@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5-Phân Loại Học Sinh</title>
+</head>
+<body>
+    <script>
+        let ten = prompt("Nhập tên học sinh")
+        let a = parseInt(prompt("Nhập điểm kiểm tra"));
+        let b = parseInt(prompt("Nhập điểm thi giữa kỳ"));
+        let c = parseInt(prompt("Nhập điểm điểm thi cuối kì"));
+        let d = (parseInt(a)+(parseInt(b)*2)+(parseInt(c)*3))/6 ;
+        if (d >= 7.9) {
+            document.writeln(ten + " Là học sinh Giỏi");
+        }else if (d >= 6.5){
+            document.writeln(ten + " Là học sinh Khá");
+        }else if (d >= 5){
+            document.writeln(ten + " Là học sinh Trung Bình");
+        }else {
+            document.writeln(ten + " Là học sinh Yếu");
+        }
+    </script>
+</body>
+</html>

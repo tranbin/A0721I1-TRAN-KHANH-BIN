@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME PUZZE</title>
+</head>
+<body>
+    <!-- Sử dụng switch case cho các hình đơn ghép thành hình hoàn thiện 
+    hiện thông báo đã chiến thắng -->
+    <img id="hinh1" src="meliodas1.jpg" style="height: 150px;width: 600px;" onclick="changeImg(1)"><br>
+    <img id="hinh2" src="rong2.jpg" style="height: 150px;width: 600px;" onclick="changeImg(2)"><br>
+    <img id="hinh3" src="songoku3.jpg" style="height: 150px;width: 600px;" onclick="changeImg(3)">
+<script>
+    let objHinh1 = document.getElementById("hinh1");
+    let objHinh2 = document.getElementById("hinh2");
+    let objHinh3 = document.getElementById("hinh3");
+    function changeImg(choose) {
+        switch(choose){
+            case 1 :
+                if(objHinh1.getAttribute('src')=='meliodas1.jpg'){
+                    objHinh1.src='rong1.jpg';
+                }else if (objHinh1.getAttribute('src')=='rong1.jpg'){
+                    objHinh1.src='songoku1.jpg';
+                }else{
+                    objHinh1.src='meliodas1.jpg'
+                }
+                setTimeout(check,2300)
+                break
+            case 2 :
+                if(objHinh2.getAttribute('src')=='meliodas2.jpg'){
+                    objHinh2.src='rong2.jpg';
+                }else if (objHinh2.getAttribute('src')=='rong2.jpg'){
+                    objHinh2.src='songoku2.jpg';
+                }else{
+                    objHinh2.src='meliodas2.jpg'
+                }
+                setTimeout(check,2300)
+                break
+            case 3 :
+                if(objHinh3.getAttribute('src')=='meliodas3.jpg'){
+                    objHinh3.src='rong3.jpg';
+                }else if (objHinh3.getAttribute('src')=='rong3.jpg'){
+                    objHinh3.src='songoku3.jpg';
+                }else{
+                    objHinh3.src='meliodas3.jpg'
+                }
+                setTimeout(check,2300)
+                break
+            }
+    }
+    function check(){
+        if(objHinh1.getAttribute('src')=='meliodas1.jpg'&&objHinh2.getAttribute('src')=='meliodas2.jpg'&& objHinh3.getAttribute('src')=='meliodas3.jpg'){
+        alert("The Winner of Meliodas");
+    }else if (objHinh1.getAttribute('src')=='rong1.jpg'&&objHinh2.getAttribute('src')=='rong2.jpg'&&objHinh3.getAttribute('src')=='rong3.jpg'){
+        alert("The Winner of HipCup");
+    }else if(objHinh1.getAttribute('src')=='songoku1.jpg'&&objHinh2.getAttribute('src')=='songoku2.jpg'&&objHinh3.getAttribute('src')=='songoku3.jpg'){
+        alert("The winner of Songoku");
+    }
+}
+    
+       
+
+</script>
+    
+</body>
+</html>

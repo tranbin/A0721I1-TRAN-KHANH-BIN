@@ -1,0 +1,19 @@
+table {
+    background: paleturquoise;
+    border-radius: 5px;
+    border-collapse: collapse;
+    border-spacing: 5px;
+}
+.number {
+    background: rgb(240, 232, 235);
+}
+.number:hover{
+    cursor: pointer;
+    background: rgb(241, 175, 175);
+    transition: all .2s ease-in-out;
+}
+.operator:hover{
+    cursor: pointer;
+    background:peachpuff;
+    transition: all .1s ease-in-out;
+}

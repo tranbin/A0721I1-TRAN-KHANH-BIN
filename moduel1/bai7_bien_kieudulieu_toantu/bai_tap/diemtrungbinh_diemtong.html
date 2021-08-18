@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến - Kiểu dữ liệu - Toán tử</title>
+</head>
+<body>
+          <!--  //bài tập 1//-->
+        <input type="text" id="dHoa" placeholder="Nhập điểm Hóa ở đây">
+        <input type="text" id="dLy" placeholder="Nhập điểm Lý ở đây">
+        <input type="text" id="dSinh" placeholder="Nhập điểm Sinh ở đây">
+        <input id="btn" type="button" value="Hiển Thị" onclick="tinh()">
+        <input id ="tong3diem" type="text" placeholder="Tổng 3 điểm ở đây">
+        <input id ="dtb" type="text" placeholder="Điểm trung bình ở đây">
+        <p id = s1></p>
+        <p id = s2></p>
+<script>
+    function tinh() {
+        let dHoa = document.getElementById('dHoa').value;
+        let dLy = document.getElementById('dLy').value;
+        let dSinh = document.getElementById('dSinh').value;
+        let tong3diem = parseInt(dHoa) + parseInt(dLy) + parseInt(dSinh);
+        let dtb = (parseInt(dHoa) + parseInt(dLy) + parseInt(dSinh)) / 3;
+        document.getElementById("tong3diem").value = tong3diem;
+        document.getElementById("s1").innerText = "Điểm tổng 3 môn là   " + tong3diem;
+        document.getElementById("dtb").value = dtb;
+        document.getElementById("s2").innerText = "Điểm trung bình   " + dtb;
+
+    }
+
+</script>
+
+
+</body>
+</html>

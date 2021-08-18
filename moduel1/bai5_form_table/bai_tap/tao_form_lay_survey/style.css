@@ -1,0 +1,23 @@
+form
+{
+    font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    letter-spacing: .01em;
+    margin: 10px;
+    padding: 0;
+}
+header
+{
+    border-bottom: 1px dotted #ccc
+}
+
+form h2
+{
+    font-size: 160%;
+    font-weight: normal;
+}
+form p
+{
+    color: #555555;
+    padding: 0;
+}
+

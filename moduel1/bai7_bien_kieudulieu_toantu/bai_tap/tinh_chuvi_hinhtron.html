@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập đường kính : </label>
+<input type="text" name="duongkinh" id="dkD" placeholder="Nhập đường kính (d) tại đây">
+<input type="button" name="tinhC" id="btn" onclick="btn()" value="Tính C :">
+<label>Chu vi hình tròn là : </label>
+<input type="text" name="chuvi" id="ctron" placeholder="Chu vi hình tròn sẽ hiển thị ở đây">
+<p id="newValue">Chu vi hình tròn : </p>
+<script>
+    function btn() {
+        let dkD = document.getElementById("dkD").value;
+        let ctron = parseInt(dkD) * 3.14;
+        document.getElementById("ctron").value = ctron;
+        document.getElementById("newValue").innerText = "Chu vi hình tròn là :" + ctron;
+    }
+</script>
+
+</body>
+</html>

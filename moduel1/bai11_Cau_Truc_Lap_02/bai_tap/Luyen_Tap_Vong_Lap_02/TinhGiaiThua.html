@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let giaithua = 1;
+        let number = parseInt(prompt("Nhập số nguyên dương cần tính giai thừa"));
+        if (number == 0 || number == 1) {
+            giaithua = 1;
+            document.write("giaithua");
+        } else if (number < 0) {
+            alert("Số bạn nhập không phải là số nguyên dương")
+            number = parseInt(prompt("Nhập lại số nguyên dương cần tính giai thừa"));
+        } else {
+            for (i = 1; i <= number; i++) {
+                giaithua = giaithua * i;
+            }
+        }
+        document.write("Giai thừa của số " + number + " là:" + giaithua);
+    </script>
+</body>
+
+</html>

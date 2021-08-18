@@ -1,0 +1,57 @@
+.banga{
+    width: 400x;
+    height: 400px;
+    background: burlywood;
+
+}
+.bangb
+{
+    width: 400x;
+    height: 400px;
+    background: bisque;
+    font-family: Helvetica, Arial, Tahoma, sans-serif;;
+}
+.bangb .h3
+{
+    text-align: center;
+    text-transform: uppercase;
+    color: blue;
+    font-size:150%;
+}
+.ten1
+{
+    float: left;
+    margin-left: 40px;
+}
+.ten1 ul
+{
+    display: inline-block;
+    list-style-type: none;
+}
+.ten1 ul li
+{
+    color: blue;
+}
+.ten2
+{
+    float: right;
+    margin-right: 40px;
+}
+.ten2 ul
+{
+    display: inline-block;
+    list-style-type: none;
+}
+.ten2 ul li
+{
+    color: blue;
+    text-align: right;
+}
+.tkb
+{
+    margin-top: 130px;
+    margin-left: 30%;
+}
+
+
+

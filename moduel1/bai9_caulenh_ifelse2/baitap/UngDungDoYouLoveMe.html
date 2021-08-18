@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="position: absolute; color: pink; left: 100px; right: 200px;">Em có yêu anh Hônggggg?</h1>
+    <input type="button" id="btnYes" value="Phải Có" onclick="yesClick()" style="position: absolute;cursor: pointer;left: 150px;top: 70px;color: pink;">
+    <input type="button" id="btnNo" value="Từ chối không được đâu" onmouseover="noClick()" style="position: absolute;cursor: pointer;left: 250px;top: 70px; color: pink;">
+    <script>
+        function yesClick() {
+            alert("<3 yêu em");
+        }
+        function noClick() {
+            var x = Math.round(Math.random()* window.innerHeight);
+            var y = Math.round(Math.random() * window.innerWidth);
+            document.getElementById("btnNo").style.left = x + 'px';
+            document.getElementById("btnNo").style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>

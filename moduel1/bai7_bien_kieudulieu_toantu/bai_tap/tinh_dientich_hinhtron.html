@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label>Nhập bán kính : </label>
+<input type="text" name="bankinh" id="bkr" placeholder="Nhập bán kính (r) tại đây">
+<input type="button" name="tinhS" id="btn" onclick="btn()" value="Tính S :">
+<label>Diện tích hình tròn là : </label>
+<input type="text" name="dientich" id="stron" placeholder="Diện tích hình tròn sẽ hiển thị ở đây">
+<p id="newValue">S tích hình tròn : </p>
+<script>
+    function btn() {
+        let bkr = document.getElementById("bkr").value;
+        let stron = (parseInt(bkr) * 2) * 3.14;
+        document.getElementById("stron").value = stron;
+        document.getElementById("newValue").innerText = "Diện tích hình tròn là :" + stron;
+    }
+</script>
+
+
+</body>
+</html>
