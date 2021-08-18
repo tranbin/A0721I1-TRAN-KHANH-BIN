@@ -13,6 +13,20 @@
         Ví dụ: nếu bạn nhập vào chuỗi
          'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'. -->
     <script>
+        let str = prompt("Nhập vào một chuỗi")
+        let upPer = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        let loWer = "abcdefghijklmnopqrstuvwxyz"
+        let result = []
+        for (let i = 0; i < str.length; i++) {
+            if (upPer.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLowerCase())
+            } else if (loWer.indexOf(str[i] !== -1)) {
+                result.push(str[i].toUpperCase())
+            } else {
+                result.push(str[i])
+            }
+        }
+        alert(result.join(""))
     </script>
 </body>
 
