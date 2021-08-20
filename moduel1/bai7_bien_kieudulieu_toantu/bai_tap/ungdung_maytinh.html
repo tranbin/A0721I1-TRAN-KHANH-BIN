@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<input type="text" name="numbera" id="numbera">
-<input type="text" name="numberb" id="numberb"><br>
-<input type="button" value="Additions(+)" id="Add" onclick="add()">
-<input type="button" value="Subtractions(-)" id="Sub" onclick="sub()">
-<input type="button" value="Multiplication(X)" id="Multi" onclick="mul()">
-<input type="button" value="Division(/)" id="Divi" onclick="divi()">
-<p id="newValue">New Value : </p>
-<script>
-    function add() {
-        let numbera = document.getElementById("numbera").value;
-        let numberb = document.getElementById("numberb").value;
-        let newValue= parseInt(numbera) + parseInt(numberb);
-        document.getElementById("newValue").value = newValue;
-        document.getElementById("newValue").innerText = "Result Division is :" +newValue;
-    }
-    function sub() {
-        let numbera = document.getElementById("numbera").value;
-        let numberb = document.getElementById("numberb").value;
-        let newValue= parseInt(numbera) - parseInt(numberb);
-        document.getElementById("newValue").value = newValue;
-        document.getElementById("newValue").innerText = "Result Division is :" +newValue;
-    }
-    function mul() {
-        let numbera = document.getElementById("numbera").value;
-        let numberb = document.getElementById("numberb").value;
-        let newValue= parseInt(numbera) * parseInt(numberb);
-        document.getElementById("newValue").value = newValue;
-        document.getElementById("newValue").innerText = "Result Division is :" +newValue;
-    }
-    function divi() {
-        let numbera = document.getElementById("numbera").value;
-        let numberb = document.getElementById("numberb").value;
-        let newValue= parseInt(numbera) / parseInt(numberb);
-        document.getElementById("newValue").value = newValue;
-        document.getElementById("newValue").innerText = "Result Division is :" +newValue;
-    }
-</script>
+    <input type="text" name="numbera" id="numbera">
+    <input type="text" name="numberb" id="numberb"><br>
+    <input type="button" value="Additions(+)" id="Add" onclick="add()">
+    <input type="button" value="Subtractions(-)" id="Sub" onclick="sub()">
+    <input type="button" value="Multiplication(X)" id="Multi" onclick="mul()">
+    <input type="button" value="Division(/)" id="Divi" onclick="divi()">
+    <p id="newValue">New Value : </p>
+    <script>
+        function add() {
+            let numbera = document.getElementById("numbera").value;
+            let numberb = document.getElementById("numberb").value;
+            let newValue = parseInt(numbera) + parseInt(numberb);
+            document.getElementById("newValue").value = newValue;
+            document.getElementById("newValue").innerText = "Result Division is :" + newValue;
+        }
+
+        function sub() {
+            let numbera = document.getElementById("numbera").value;
+            let numberb = document.getElementById("numberb").value;
+            let newValue = parseInt(numbera) - parseInt(numberb);
+            document.getElementById("newValue").value = newValue;
+            document.getElementById("newValue").innerText = "Result Division is :" + newValue;
+        }
+
+        function mul() {
+            let numbera = document.getElementById("numbera").value;
+            let numberb = document.getElementById("numberb").value;
+            let newValue = parseInt(numbera) * parseInt(numberb);
+            document.getElementById("newValue").value = newValue;
+            document.getElementById("newValue").innerText = "Result Division is :" + newValue;
+        }
+
+        function divi() {
+            let numbera = document.getElementById("numbera").value;
+            let numberb = document.getElementById("numberb").value;
+            let newValue = parseInt(numbera) / parseInt(numberb);
+            document.getElementById("newValue").value = newValue;
+            document.getElementById("newValue").innerText = "Result Division is :" + newValue;
+        }
+    </script>
 
 </body>
+
 </html>

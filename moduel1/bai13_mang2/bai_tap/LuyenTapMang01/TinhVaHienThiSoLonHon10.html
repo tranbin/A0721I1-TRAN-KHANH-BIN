@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        /* Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+                Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.*/
+        let mang = [];
+        let manglonhon10 = [];
+        for (i = 0; i < 10; i++) {
+            mang[i] = Number(prompt("Nhập 10 số vào mảng : "))
+        }
+        document.write("10 số bạn vừa nhập là : " + mang + "<br>");
+        for (i = 0; i < mang.length; i++) {
+            if (mang[i] >= 10) {
+                manglonhon10.push(mang[i])
+            }
+        }
+        document.write("Số >=10 trong mảng vừa nhập là : " + manglonhon10 + " <br>")
+    </script>
+</body>
+
+</html>

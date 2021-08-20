@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Viết chương trình đếm số nguyên âm trong một chuỗi -->
+    <script>
+        let mang = [];
+        let dem = [];
+        for (let i = 0; i < 5; i++) {
+            mang[i] = Number(prompt("Nhập số trong mảng :"));
+            if (mang[i] < 0) {
+                dem.push(mang[i])
+            }
+        }
+        document.write("Mảng bạn vừa nhập là : " + mang + "<br>");
+        document.write("Số nguyên âm trong mảng vừa nhập là " + dem.length + " gồm phần tử : " + dem + "<br>")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+         Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp. -->
+    <script>
+        let num = [];
+        for (let i = 0; i < 10; i++) {
+            num[i] = Number(prompt("Nhập vào 10 phần tử của mảng"))
+        }
+        document.write("Phần tử của bạn vừa nhập là : " + num + "<br>")
+        document.write("Phần tử theo tứ tự giảm dần là : " + num.sort(function(a, b) {
+            return b - a;
+        }))
+    </script>
+</body>
+
+</html>

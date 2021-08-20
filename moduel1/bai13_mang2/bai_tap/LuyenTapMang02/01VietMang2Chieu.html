@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, 
+         in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau -->
+    <script>
+        let familys = [
+            [" Tên : Trần Khánh Bin", " Ngày Sinh : 12 / 7 / 1997", "Tuổi : 24 ", "Nghề Nghiệp : Làm lập trình viên"],
+            ["Tên : Nguyễn Thị Ngọc Huyền", "Ngày Sinh : 30 / 03 / 1998", "Tuổi : 23", "Nghề Nghiệp : Làm Giáo Viên Sư Phạm Tiếng Pháp"],
+            [" Tên : Trần Hoàng Hoài An", "Ngày Sinh : 21 / 05 / 2012", "Tuổi : 9", "Nghề Nghiệp : Học Sinh"]
+        ]
+        document.write("<br>")
+        for (let family of familys) {
+            for (let info of family) {
+                document.writeln(info)
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>

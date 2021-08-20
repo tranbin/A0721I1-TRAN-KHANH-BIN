@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--  Viết chương trình khởi tạo mảng số nguyên.
+         Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng. -->
+    <script>
+        let mang = []
+        let max = 0;
+        let giatritrungbinh = 0;
+        for (i = 0; i < 5; i++) {
+            mang[i] = Number(prompt("Nhập 5 số trong mảng !"))
+        }
+        document.write("Mảng bạn vừa nhập gồm 5 phần tử là : " + mang + "<br>")
+        for (i = 0; i < mang.length; i++) {
+            if (mang[i] > max) {
+                max = mang[i];
+                giatritrungbinh = giatritrungbinh + mang[i];
+            }
+        }
+        document.write("Gía trị lớn nhất của mảng vừa nhập là  : " + max + "<br>" + "GIÁ TRỊ TRUNG BÌNH CỦA MẢNG LÀ " + giatritrungbinh)
+    </script>
+</body>
+
+</html>

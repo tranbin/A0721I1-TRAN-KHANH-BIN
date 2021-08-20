@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+    <!-- nhập vào 2 chuỗi 
+        + so sánh về độ dài đầu tiên
+        + nếu độ dài bằng nhau thì cho chạy từng kí tự trong chuỗi để kiểm tra
+        + cho 1 so sánh trc là đúng và sau đó đưa ra kết quả  -->
+    <script>
+        let chuoiA = prompt("Nhập chuỗi A :")
+        let chuoiB = prompt("Nhập chuỗi B")
+        let check = true
+        document.write("Chuỗi A : " + chuoiA + "<br>" + "Chuỗi B : " + chuoiB + "<br>")
+        if (chuoiA.length != chuoiB.length) {
+            document.write("2 chuỗi không giống nhau ");
+        } else {
+            for (i = 0; i < chuoiA.length; i++) {
+                for (j = 0; j < chuoiB.length; j++) {
+                    if (chuoiA[i] == chuoiB[j]) {
+                        check = true;
+                    } else {
+                        check = false;
+                    }
+                }
+            }
+            if (check == false) {
+                document.write("2 chuỗi không giống nhau ");
+            } else {
+                document.write("2 chuỗi giống nhau ");
+            }
+        }
+    </script>
+</body>
+
+</html>

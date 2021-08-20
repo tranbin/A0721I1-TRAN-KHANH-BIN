@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Nhập chiều cao</label>
+    <input type="text" id="chieucao">
+    <label for="">Nhập cân nặng</label>
+    <input type="text" id="cannang">
+    <input type="button" value="Tính BMI" onclick="chisoBMI()">
+    <p id="bmi"> Chỉ số bmi của bạn :</p>
+    <p id="nhanxet">Bạn nên :</p>
+</body>
+<script>
+    function chisoBMI() {
+        let chieucao = document.getElementById("chieucao").value;
+        let cannang = document.getElementById("cannang").value;
+        let bmi = parseInt(cannang) / (parseInt(chieucao) * parseInt(chieucao))
+        document.getElementById("bmi").innerText = "Chỉ số bmi là :" + bmi
+        if (bmi < 18) {
+            document.getElementById("nhanxet").innerText = "Bạn nên làm gì đó để tăng cân";
+        } else if (bmi < 25) {
+            document.getElementById("nhanxet").innerText = "Tuyệt vời ";
+        } else if (bmi < 30) {
+            document.getElementById("nhanxet").innerText = "Bạn nên giảm cân";
+        } else {
+            document.getElementById("nhanxet").innerText = "Bạn nặng quá ";
+        }
+    }
+</script>
+
+</html>
