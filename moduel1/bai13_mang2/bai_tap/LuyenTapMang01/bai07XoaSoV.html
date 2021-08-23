@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. 
+        Chương trình kiểm tra xem V có thuộc mảng đã cho không, 
+        nếu V thuộc mảng đã cho xoá V khỏi mảng 
+        (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+         và gán 0 cho phần tử cuối cùng của mảng) -->
+    <script>
+        let mang = [],
+            bin = true;
+        let mangmoi = []
+        let soV = Number(parseInt(prompt("Nhập số V")));
+        for (let i = 0; i < 10; i++) {
+            mang[i] = parseInt(prompt("Nhập mảng : "))
+            if (mang[i] == soV) {
+                bin = false
+            }
+            if (mang[i] != soV) {
+                mangmoi.push(mang[i]);
+            }
+        }
+        document.write("Mảng bạn vừa nhập là : " + mang + "<br>")
+        document.write("Số V bạn vừa nhập : " + soV + "<br>")
+        if (bin == false) {
+            document.write("V nằm trong mảng vừa nhập" + "<br>")
+            document.write("Đã xóa phần tử , mảng mới là " + mangmoi + "<br>")
+        } else {
+            document.write("V không nằm trong mảng vừa nhập" + "<br>")
+        }
+    </script>
+</body>
+
+</html>

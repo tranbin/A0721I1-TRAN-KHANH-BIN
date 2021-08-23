@@ -9,45 +9,32 @@
 </head>
 
 <body>
-    <!-- : Game đoán số
-
-Nâng cấp game "Hãy thử đoán xem!"
-
-1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu 
-chơi hoặc chơi lại 
-
-
-2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
-
-Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
-Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn 
-
-Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán 
-
-Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
-Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi 
-
-Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
-Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần -->
-
-    <input type="button" id="startedandfinish" value="Chơi" onclick="btn()">
+    <button onclick="play()">Play</button>
     <script>
-        function btn() {
-            let phamvi = Number(prompt("Bạn muốn nhập số trong khoảng từ 0 đến ? "))
-            let nhapso = Number(prompt("Nhập vào số muốn đoán"))
-            let soRamdom
-            if (phamvi) {
-                soRamdom = Math.floor(Math.random() * phamvi)
-                if (soRamdom == nhapso) {
-                    alert("Bạn đã đoán đung")
+        function play() {
+
+            let min = Number(prompt("Nhập số nhỏ nhất"))
+            let max = Number(prompt("Nhập số lớn nhất"))
+            let correct = min + Math.ceil(Math.random() * (max - min));
+
+            let choose;
+            let dem = 0;
+            do {
+                choose = prompt("Nhập vào số bạn muốn đoán");
+                dem++;
+                if (choose == correct) {
+                    alert("Bạn đã đoán đúng Trò chơi kết thúc");
+                    break;
+                } else if (choose > correct) {
+                    alert("Sai !Số bạn đoán lớn hơn kết quả vui lòng nhập lại");
                 } else {
-                    while (soRamdom != nhapso) {
-                        alert("Bạn đoán sai số đúng là " + soRamdom)
-                        nhapso = Number(prompt("Nhập vào số muốn đoán"))
-                    }
-                    alert("Bạn đoán đúng")
+                    alert("Sai !Số bạn đoán nhỏ hơn kết quả vui lòng nhập lại")
                 }
-            }
+                if (dem == 3) {
+                    alert("Bạn đã đoán quá 3 lần :) Kết thúc trò chơi")
+                    break;
+                }
+            } while (true)
         }
     </script>
 </body>

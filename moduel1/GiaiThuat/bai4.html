@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let s = 15;
+        let n = Number(prompt("Nhập N : "))
+        for (let i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                s += 1 / n * i
+            } else {
+                s += -1 / i * n
+            }
+        }
+        alert(s)
+    </script>
+</body>
+
+</html>

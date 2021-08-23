@@ -13,14 +13,22 @@
          Chương trình tìm xem V có nằm trong mảng số nguyên không? 
         Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array". -->
     <script>
-        let mang = [];
-        let check = true;
-        for (let i = 0; i < 5; i++) {
-            mang[i] = Number(prompt("Nhập vào 10 số nguyên "))
-            console.mang;
+        let mang = [],
+            bin = true
+
+        let sov = Number(prompt("Nhập vào số nguyên V"))
+        for (let i = 0; i < 10; i++) {
+            mang[i] = prompt("Nhập số vào mảng")
+            if (mang[i] == sov) {
+                bin = false
+            }
         }
-        for (let i = 0; i < mang.length; i++) {
-            let numberV = Number(prompt("Nhập Số V"))
+        document.write("Mảng bạn vừa nhập" + mang + "<br>")
+        document.write("Số nguyên V bạn vừa nhập : " + sov + "<br>")
+        if (boo == false) {
+            document.write("V is in the array")
+        } else {
+            document.write("V is not in the array")
         }
     </script>
 </body>
