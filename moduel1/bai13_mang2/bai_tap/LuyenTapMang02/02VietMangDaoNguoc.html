@@ -10,9 +10,12 @@
 
 <body>
     <script>
-        let str = ["a", "b", "c", "d", 1, 2, 7]
-        document.write(str + "<br>");
-        document.write(str.reverse());
+        let mang = []
+        for (let i = 0; i < 7; i++) {
+            mang[i] = prompt("Nhập mảng có phần tử thứ : " + i);
+        }
+        document.write("Mảng vừa nhập : " + mang + "<br>");
+        document.write("Mảng đảo ngược : " + mang.reverse())
     </script>
 </body>
 
