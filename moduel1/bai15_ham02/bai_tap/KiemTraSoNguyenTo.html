@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nhapso">
+    <input type="button" id="checked" value="Kiểm Tra" onclick="checkSoNt()">
+    <p id="check"></p>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            } else if (number == 2 || number == 3) {
+                return true;
+            } else if (number % 2 == 0) {
+                return false;
+            } else {
+                for (let i = 3; i < number; i = i + 2) {
+                    if (number % i == 0) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function checkSoNt() {
+            let so = document.getElementById("nhapso")
+            let kiemtra = isPrime(so.value);
+            if (kiemtra) {
+                document.getElementById("check").innerText = so.value + " là một số nguyên tố"
+            } else {
+                document.getElementById("check").innerText = so.value + " không là một số nguyên tố"
+            }
+        }
+    </script>
+</body>
+
+</html>
