@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+     -->
+    <input type="number" name="" id="nhapSo" placeholder="Nhập Số">
+    <input type="button" value="Tính Bình Phương" onclick="btnTinh()">
+    <p id="newValue"></p>
+    <script>
+        function btnTinh() {
+            newInput = document.getElementById("nhapSo")
+            newValueNumber = tinhBinhPhuong(newInput.value)
+            document.getElementById("newValue").innerText = newInput.value + " bình phương là " + newValueNumber
+        }
+
+        function tinhBinhPhuong(so) {
+            binhPhuong1So = so * so
+            return binhPhuong1So;
+        }
+    </script>
+</body>
+
+</html>

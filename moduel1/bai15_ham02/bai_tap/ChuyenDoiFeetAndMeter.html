@@ -9,24 +9,50 @@
 </head>
 
 <body>
-    <label for="">Input Meter</label>
-    <input type="text" placeholder="Input Meter">
-    <input type="button" value="Convert" onclick="btnFeet()" id="">
-    <p id="newValueFeet"></p>
-    <br>
-    <label for="">Input Feet</label>
-    <input type="text" placeholder="Input Feet" id="">
-    <input type="button" value="Convert">
-    <p id="newValueMeter"></p>
-    <script>
-        let giatri = document.getElementById("")
+    <!-- 
+    Chuyển đổi từ feet sang meters:
 
-        function btnFeet() {
-            let ketqua = footToMeter
+    function footToMeter(foot)
+    Chuyển đổi từ meters sang feet:
+
+    function meterToFoot(meter)
+    Công thức chuyển đổi như sau:
+
+        meter = 0.305 * foot
+        foot = 3.279 * meter 
+    -->
+    <form action="">
+        <label for="">Nhập Meter</label>
+        <input type="text" name="" id="nhapMeter" placeholder="Nhập Meter">
+        <input type="button" value="Đổi Metter" onclick="btnCovertMeter()">
+        <p id="newFeet"></p>
+        <br>
+        <label for="">Nhập Feet</label>
+        <input type="text" name="" id="nhapFeet" placeholder="Nhập Feet">
+        <input type="button" value="Đổi Feet" onclick="btnCovertFeet()">
+        <p id="newMet"></p>
+    </form>
+    <script>
+        function btnCovertMeter() {
+            inputMeter = document.getElementById("nhapMeter")
+            newValueFoot = footToMeter(inputMeter.value);
+            document.getElementById("newFeet").innerText = "Số M-F là : " + newValueFoot;
+        }
+
+        function btnCovertFeet() {
+            inputFoot = document.getElementById("nhapFeet")
+            newValueMeter = meterToFoot(inputFoot.value);
+            document.getElementById("newMet").innerText = "Số F-M là : " + newValueMeter;
         }
 
         function footToMeter(foot) {
+            meter = 0.305 * foot;
+            return meter;
+        }
 
+        function meterToFoot(meter) {
+            foot = 3.279 * meter;
+            return foot;
         }
     </script>
 </body>

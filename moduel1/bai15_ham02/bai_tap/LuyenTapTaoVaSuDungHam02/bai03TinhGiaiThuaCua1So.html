@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="number" id="nhapSo" name="" value="" placeholder="Nhập số bạn muốn Tính">
+        <input type="button" value="Tính Giai Thừa" onclick="btnTinhGiaiThua()">
+        <p id="newValue"></p>
+    </form>
+    <script>
+        function btnTinhGiaiThua() {
+            newNumber = document.getElementById("nhapSo");
+            newGiaiThua = giaiThuaCuaSo(newNumber.value);
+            document.getElementById("newValue").innerText = "Giai thừa của " + newNumber.value + " là: " + newGiaiThua;
+        }
+
+        function giaiThuaCuaSo(so) {
+            let giaiThua = 1;
+            if (so == 0 || so == 1) {
+                giaiThua = 1;
+            } else if (so < 0) {
+                return "(SAI ! Số bạn nhập không phải là số nguyên dương)"
+            } else {
+                for (i = 1; i <= so; i++) {
+                    giaiThua = giaiThua * i;
+                }
+            }
+            return giaiThua;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau:
+        Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. 
+        Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao:
+        Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, 
+        tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, 
+        duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. 
+        Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần <body> của trang web,
+        dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào.
+        Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình. -->
+    <script>
+        function nhapTenChomSao(tenSao) {
+            let chomSaoA = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let chomSaoB = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+            for (i = 0; i < chomSaoA.length; i++) {
+                if (tenSao == chomSaoA[i]) {
+                    return chomSaoB[i]
+                }
+            }
+            return ""
+        }
+
+        function timTenSao() {
+            let nhapTen = prompt("Nhập tên ngôi sao");
+            let tenSao = nhapTenChomSao(nhapTen);
+            if (tenSao == "") {
+                document.write(nhapTen + " Tên ngôi sao bạn đã nhập không có tên tương ứng");
+            } else {
+                document.write("Tên ngôi sao " + nhapTen + " có tên tương ứng là " + tenSao)
+            }
+
+        }
+        timTenSao()
+    </script>
+</body>
+
+</html>

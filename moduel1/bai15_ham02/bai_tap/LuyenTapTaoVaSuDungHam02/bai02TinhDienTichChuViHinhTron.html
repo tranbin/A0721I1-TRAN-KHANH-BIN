@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+ -->
+    <input type="number" name="" value="" placeholder="Nhập bán kính" id="banKinh">
+    <input type="button" name="" value="Tính Chu Vi" onclick="btnChuVi()">
+    <input type="button" name="" value="Tính Diện Tích" onclick="btnDienTich()">
+    <p id="newChuVi"></p>
+    <p id="newDienTich"></p>
+    <script>
+        function btnChuVi() {
+            newBanKinh = document.getElementById("banKinh");
+            newValueChuVi = chuVi(newBanKinh.value);
+            document.getElementById("newChuVi").innerText = "Chu vi hình tròn với bán kính " + newBanKinh.value + " là " + newValueChuVi;
+        }
+
+        function btnDienTich() {
+            newBanKinh = document.getElementById("banKinh");
+            newValueDienTich = dienTich(newBanKinh.value);
+            document.getElementById("newDienTich").innerText = "Diện tích hình tròn với bán kính " + newBanKinh.value + " là " + newValueDienTich;
+        }
+
+        function chuVi(r) {
+            chuViHinhTron = 2 * r * 3.14
+            return chuViHinhTron;
+        }
+
+        function dienTich(r) {
+            dienTichHinhTron = r * r * 3.14
+            return dienTichHinhTron;
+        }
+    </script>
+</body>
+
+</html>

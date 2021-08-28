@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+
+ -->
+    <script>
+        function checkMin(mang) {
+            let mangLui
+            for (i = 0; i < mang.length; i++) {
+                mangLui = mang[0]
+                if (mang[i] < mangLui) {
+                    mangLui = mang[i];
+                }
+            }
+            return mangLui;
+        }
+
+        function timMin() {
+            let mang = [];
+            for (let i = 0; i < 3; i++) {
+                mang[i] = Number(prompt("Nhập vào mảng phần tử thứ " + i));
+            }
+            document.write("Mảng bạn vừa nhập là : " + mang + "<br>")
+
+            let min = checkMin(mang);
+            document.write("Số nhỏ nhất trong mảng là " + min)
+        }
+        timMin();
+    </script>
+</body>
+
+</html>
