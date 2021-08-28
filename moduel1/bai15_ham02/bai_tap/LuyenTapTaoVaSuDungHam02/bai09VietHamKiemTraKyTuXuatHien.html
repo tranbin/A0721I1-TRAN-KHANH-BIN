@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+         kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+          Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.  -->
+    <script>
+        function checkKyTu(mang, a) {
+            count = 0;
+            for (let i = 0; i < mang.length; i++) {
+                if (mang[i] == a) {
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return count;
+            }
+            return -1;
+        }
+
+        function checkMang() {
+            let a = prompt("Nhập vào 1 ký tự");
+            let mang = [];
+            for (let i = 0; i < 7; i++) {
+                mang[i] = prompt("Nhập vào mảng với phần tử thứ " + i);
+            }
+            document.write("Mảng bạn vừa nhập là : " + mang + "<br>");
+            let newCount = checkKyTu(mang, a);
+            if (newCount > 0) {
+                document.write("Có " + newCount + " ký tự " + a + " trong mảng")
+            } else {
+                document.write("Không có ký tự trong mảng")
+            }
+        }
+        checkMang();
+    </script>
+</body>
+
+</html>
