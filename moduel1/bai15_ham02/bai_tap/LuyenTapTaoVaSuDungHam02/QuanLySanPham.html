@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Thêm sản phẩm</h3>
+    <input type="text" name="" id="addProduct" placeholder="Nhập tên sản phẩm">
+    <input type="button" value="Thêm Sản Phẩm" style="background: rgb(27, 173, 34);" onclick="buttonAdd()"> <br>
+    <h3>Hiển thị sản phẩm</h3>
+    <p id="disTable"></p>
+    <span>Có : <span id="total"></span> sản phẩm</span>
+    <script>
+        let listProduct = ["NOKIA", "SAMSUNG"];
+        let tableString = "";
+
+        function hienThiBang() {
+            tableString = '<table border="1" style="text-align: center;">' +
+                ' <tr>' +
+                '<th>STT</th>' +
+                '<th>Tên Sản Phẩm</th>' +
+                '<th>&nbsp;</th>' +
+                '<th>&nbsp;</th>' +
+                '</tr>'
+            for (let i = 0; i < listProduct.length; i++) {
+                tableString += '<tr>' +
+                    '<td>' + (i + 1) + '</td>' +
+                    '<td>' + listProduct[i] + '</td>' +
+                    '<td><input type="button" value="Sửa" onclick="buttonEdit(' + i + ')" style="background: darkkhaki;"></td>' +
+                    '<td><input type="button" value="Xoá" onclick="buttonDeleted(' + i + ')" style="background: darkkhaki;"></td>' +
+                    '</tr>'
+            }
+            tableString += '</table>'
+            document.getElementById("disTable").innerHTML = tableString;
+            document.getElementById("total").innerHTML = listProduct.length;
+
+        }
+        hienThiBang();
+
+        function buttonAdd() {
+            let newProduct = document.getElementById("addProduct").value;
+            if (newProduct == "") {
+                alert("Nhập tên sản phẩm");
+            } else {
+                listProduct.push(newProduct);
+                document.getElementById("addProduct").value = ""
+                hienThiBang()
+            }
+        }
+
+        function buttonEdit(id) {
+            let newNameProduct = prompt("Nhập tên mới của sản phẩm " + listProduct[id]);
+            if (newNameProduct == "") {
+                alert("Bạn cần phải nhập tên mới của sản phẩm !")
+            } else if (newNameProduct == null) {
+                alert("Bạn không muốn sửa tên sản phẩm ?")
+            } else {
+                listProduct[id] = newNameProduct;
+            }
+            hienThiBang();
+        }
+
+        function buttonDeleted(id) {
+            let newConfirm = confirm("Bạn có muốn xóa sản phẩm " + listProduct[id]);
+            if (newConfirm == true) {
+                listProduct.splice(id, 1);
+                alert("Bạn đã xóa sản phẩm ")
+            } else {
+                alert("Bạn không muốn xóa sản phẩm")
+            }
+            hienThiBang();
+        }
+    </script>
+</body>
+
+</html>
