@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <table>
-        <tr>
-           <th></th>
-        </tr>
-    </table>
+    <input type="number" value="" id="nhapR" placeholder="Nhập bán kính">
+    <input type="button" value="Tính" onclick="btnTinh()">
+
+    <p>Chu vi :<span id="chuVi"></span></p>
+    <p>Dien tich :<span id="dienTich"></span></p>
+    <script>
+        function btnTinh() {
+            let newNumber = document.getElementById("nhapR").value;
+            document.getElementById("nhapR").value = "";
+            let P = newNumber * 2;
+            let S = newNumber * newNumber;
+            document.getElementById("chuVi").innerText = P
+            document.getElementById("dienTich").innerText = S
+        }
+    </script>
 </body>
+
 </html>

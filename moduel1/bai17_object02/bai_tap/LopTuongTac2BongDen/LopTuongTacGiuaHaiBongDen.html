@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+
+<body>
+    <img src="lampoff.gif" id="lamp">
+    <h3 id="result">Bóng đèn đang tắt</h3>
+    <input type="button" value="Bật/Tắt" onclick="btnOnOff()">
+
+    <script>
+        class SwitchButton {
+            constructor(status) {
+                this.status = status;
+            }
+            btnOnOff() {
+                this.status = !this.status
+            }
+        }
+        class Lamp {
+            constructor(switchButton) {
+                this.button = switchButton;
+            }
+            switch () {
+                if (this.button.status) {
+                    document.getElementById("lamp").src = "lampon.gif"
+                    document.getElementById("result").innerText = "Bóng đèn đang bật"
+                } else {
+                    document.getElementById("lamp").src = "lampoff.gif"
+                    document.getElementById("result").innerText = "Bóng đèn đang tắt"
+                }
+            }
+        }
+        let switchButton = new SwitchButton(false);
+        let lamp1 = new Lamp(switchButton);
+
+        function btnOnOff() {
+            switchButton.btnOnOff();
+            lamp1.switch()
+        }
+    </script>
+</body>
+
+</html>

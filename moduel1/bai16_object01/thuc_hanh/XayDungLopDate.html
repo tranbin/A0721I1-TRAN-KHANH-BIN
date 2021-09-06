@@ -10,36 +10,48 @@
 
 <body>
     <script>
-        let MyDate = function(day, month, year) {
-
-            this.day = day;
-            this.month = month;
-            this.year = year;
-
-            this.getDay = function() {
+        class MyDate {
+            constructor(ngay, thang, nam) {
+                this.day = ngay;
+                this.month = thang;
+                this.year = nam;
+            }
+            getDay() {
                 return this.day;
             }
-            this.getMonth = function() {
+            getMonth() {
                 return this.month;
             }
-            this.getYear = function() {
+            getYear() {
                 return this.year;
             }
-            this.setDay = function(day) {
-                this.day = day;
+            setDay(ngay) {
+                this.day = ngay;
             }
-            this.setMonth = function(month) {
-                this.month = month;
+            setMonth(thang) {
+                this.month = thang;
             }
-            this.setYear = function(year) {
-                this.year = year;
+            setYear(nam) {
+                this.year = nam;
+            }
+            setDate(ngay, thang, nam) {
+                this.day = ngay;
+                this.month = thang;
+                this.year = nam;
+            }
+            toString() {
+                return this.day + "-" + this.month + "-" + this.year
             }
         }
-        let date = new MyDate(2, 2, 2007);
-        let day = date.getDay(); // 2
-        let month = date.getMonth(); // 2
-        let year = date.getYear(); // 2007
-        alert(day + "/" + month + "/" + year);
+        let date1 = new MyDate(1, 12, 2020)
+        alert(date1.day + "-" + date1.month + "-" + date1.year) //hiển thị ngày tháng năm date1
+        date1.setDay(30); //đổi ngày date 1 thành 30
+        date1.setMonth(3); //đổi tháng date1 thành 3
+        date1.setYear(1998); //đổi năm date1 thành 1998
+        alert(date1.day + "-" + date1.month + "-" + date1.year) //hiển thị date1 với ngày tháng năm vừa đổi
+        date1.setDate(12, 7, 1997)
+            /* alert(date1.day + "-" + date1.month + "-" + date1.year) */ //hiển thị date1 với ngày tháng năm vừa đổi với setdate
+        alert(date1.toString())
     </script>
 </body>
 

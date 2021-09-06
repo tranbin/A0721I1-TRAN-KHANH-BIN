@@ -9,7 +9,44 @@
 </head>
 
 <body>
+    <canvas id="myCanvasRectangle" style="border: 1px solid black; width: 500px;height: 300px; "></canvas><br>
+    <script>
+        class Rectangle {
+            constructor(chieudai, chieurong) {
+                this.ChieuDai = chieudai;
+                this.ChieuRong = chieurong;
+            }
+            getChieuDai() {
+                return this.chieudai;
+            }
+            getChieuRong() {
+                return this.chieurong;
+            }
+            setChieuDai(chieudai) {
+                this.ChieuDai = chieudai;
+            }
+            setChieuRong(chieurong) {
+                this.ChieuRong = chieurong;
+            }
+            getChuVi() {
+                return (this.ChieuDai + this.ChieuRong) * 2;
+            }
+            getDienTich() {
+                return this.ChieuDai * this.ChieuRong;
+            }
 
+        }
+        let rectangle = new Rectangle(30, 20);
+        let chuVi = rectangle.getChuVi();
+        let dienTich = rectangle.getDienTich();
+        alert("Chu vi hình chữ nhật là : " + chuVi)
+        alert("Diện tích hình chữ nhật là : " + dienTich)
+
+        let canvasRectangle = document.getElementById("myCanvasRectangle");
+        let ctx = canvasRectangle.getContext("2d");
+        ctx.fillStyle = "pink";
+        ctx.fillRect(100, 50, 30, 20)
+    </script>
 </body>
 
 </html>
