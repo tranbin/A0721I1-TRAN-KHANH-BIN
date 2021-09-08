@@ -9,20 +9,77 @@
 </head>
 
 <body>
-    <input type="number" value="" id="nhapR" placeholder="Nhập bán kính">
-    <input type="button" value="Tính" onclick="btnTinh()">
-
-    <p>Chu vi :<span id="chuVi"></span></p>
-    <p>Dien tich :<span id="dienTich"></span></p>
     <script>
-        function btnTinh() {
-            let newNumber = document.getElementById("nhapR").value;
-            document.getElementById("nhapR").value = "";
-            let P = newNumber * 2;
-            let S = newNumber * newNumber;
-            document.getElementById("chuVi").innerText = P
-            document.getElementById("dienTich").innerText = S
+        class Apple {
+            constructor() {
+                this.weight = 10;
+            }
+            decrease() {
+                this.weight--;
+            }
+            isEmpty() {
+                if (this.weight) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getWeight() {
+                return this.weight;
+            }
         }
+        class Human {
+            constructor(ten, cannang, gioitinh) {
+                this.name = ten;
+                this.weight = cannang;
+                this.gender = gioitinh;
+            }
+            isMale(gender) {
+                if (this.gender) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            setGender(gioitinh) {
+                this.gender = gioitinh;
+            }
+            checkApple(apple) {
+                if (apple.isEmpty == 0) {
+                    alert("Táo đã hết")
+                } else {
+                    alert("Táo vẫn còn")
+                }
+            }
+            eatApple(apple) {
+                this.weight++;
+                apple.decrease();
+            }
+            say(string) {
+                console.log(this.getName() + ":" + string)
+            }
+            getName() {
+                return this.name;
+            }
+            setName(ten) {
+                this.name = ten;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            setWeight(cannang) {
+                this.weight = cannang;
+            }
+        }
+        let tao = new Apple();
+        let people1 = new Human("NAM", 45, true)
+        let people2 = new Human("Nu", 40, false)
+        people1.say("eat")
+        people1.eatApple(tao)
+        people2.say("Ok")
+        people2.eatApple(tao)
+        console.log(people1.getWeight());
+        console.log(people2.getWeight())
     </script>
 </body>
 

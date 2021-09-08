@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Apple {
+            constructor() {
+                this.weight = 10;
+            }
+            decrease() {
+                this.weight--;
+            }
+            isEmpty() {
+                if (this.weight == 0) {
+                    return true;
+                } else {
+                    return false
+                }
+            }
+            getWeight() {
+                return this.weight;
+            }
+        }
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale() {
+                if (this.gender) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            setGender(gender) {
+                this.gender = gender;
+            }
+            setName(name) {
+                this.name = name;
+            }
+            setWeight(weight) {
+                this.weight = weight;
+            }
+            getName() {
+                return this.name;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            checkApple(apple) {
+                if (apple.isEmpty()) {
+                    alert("Táo đã hết")
+                } else {
+                    alert("Táo vẫn còn")
+                }
+            }
+            eatApple(apple) {
+                this.weight++;
+                apple.decrease();
+            }
+            say(messeage) {
+                console.log(this.getName() + ":" + messeage)
+            }
+        }
+        let tao = new Apple();
+        let nam = new Human("Nam", true, 67)
+        let nu = new Human("Nu", false, 45)
+        nam.say("Em ăn đi BÉ");
+        nu.say("Dạ !");
+        nu.eatApple(tao);
+        nu.say("BÉ ăn rồi ! a cũng ăn đi");
+        nam.say("ừ ăn đi a ăn giờ á ! ");
+        nu.eatApple(tao);
+        nu.say("BÉ ăn rồi nha ! a cũng ăn đi");
+        nam.eatApple(tao)
+        console.log(tao.getWeight());
+        console.log(nam.getWeight());
+        console.log(nu.getWeight());
+    </script>
+</body>
+
+</html>

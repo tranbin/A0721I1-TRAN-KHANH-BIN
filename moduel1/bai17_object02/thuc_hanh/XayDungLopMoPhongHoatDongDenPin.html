@@ -12,30 +12,30 @@
     <script>
         class Battery {
             constructor(energy) {
-                this.Energy = energy;
+                this.energy = energy;
             }
             setEnergy(energy) {
-                this.Energy = energy;
+                this.energy = energy;
             }
             getEnergy() {
-                return this.Energy;
+                return this.energy;
             }
             decreaseEnergy() {
-                if (this.Energy > o) {
-                    this.Energy--;
+                if (this.energy > o) {
+                    this.energy--;
                 }
             }
 
         }
         class FlashLamp {
             constructor(battery) {
-                this.Battery = battery
+                this.battery = battery
             }
             setBattery(battery) {
-                this.Battery = battery
+                this.battery = battery
             }
             getBatteryInfo() {
-                return this.Battery.getEnergy();
+                return this.battery.getEnergy();
             }
             light() {
                 if (this.status) {

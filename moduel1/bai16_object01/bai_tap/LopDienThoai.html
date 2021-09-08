@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class DienThoai {
+            constructor() {
+                this.pindienthoai = 100;
+                this.status = true;
+                this.soanTinNhan = "";
+                this.tinDaGui = []
+                this.tinDen = [];
+
+            }
+            checkStatusMobile() {
+                if (this.status) {
+                    alert("Điện thoại đã bật!")
+                } else {
+                    alert("Điện thoại đã tắt")
+                }
+            }
+            batTacDienThoai() {
+                this.status = !this.status;
+            }
+            sacPin() {
+                this.pindienthoai = 100;
+            }
+            soanTin(string) {
+                this.soanTinNhan = string;
+                this.pindienthoai--;
+            }
+            nhanTinNhan(message) {
+                    this.tinDen.push(message);
+                    this.pindienthoai--;
+                }
+                //
+            guiTin(mobile, message) {
+                this.soanTin(message);
+                mobile.nhanTinNhan(this.soanTinNhan);
+                this.tinDaGui.push(this.soanTinNhan)
+                this.soanTinNhan = []
+                this.pindienthoai--;
+            }
+
+            hienThiTinDen() {
+                for (let i = 0; i < this.tinDen.length; i++) {
+                    console.log(this.tinDen[i])
+                }
+                this.pindienthoai--;
+            }
+            hienThiTinGui() {
+                for (let string of this.tinDen) {
+                    console.log(this.tinDaGui)
+                }
+            }
+
+        }
+        let nokia = new DienThoai();
+        let iphone = new DienThoai();
+        nokia.guiTin(iphone, "xin chào iphone");
+        iphone.hienThiTinDen();
+        iphone.guiTin(nokia, "xin chao nokia.Mình khỏe");
+        nokia.hienThiTinDen();
+    </script>
+</body>
+
+</html>
