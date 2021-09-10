@@ -41,13 +41,13 @@
 
             }
             guiTin(mobile, message) {
-                    this.soanTin(message) //soạn tin nhắn
-                    mobile.nhanTinNhan(this.memoryDraft);
-                    this.memorySent.push(this.memoryDraft);
-                    this.memoryDraft = [];
+                    this.soanTin(message) //soạn tin nhắn 
+                    mobile.nhanTinNhan(this.memoryDraft); //tin nhắn gửi đến 1đt
+                    this.memorySent.push(this.memoryDraft); // lưu tin nhắn vào hộp tư đến
+                    this.memoryDraft = []; //?
                     this.pin--;
                 }
-                // nhận tin nhắn
+                // nhận tin nhắn từ một điện thoại khác
             nhanTinNhan(message) {
                 this.memoryImport.push(message);
                 this.pin--;

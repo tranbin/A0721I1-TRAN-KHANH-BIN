@@ -18,20 +18,21 @@
                 if (this.doC > -273) {
                     return ((this.doC * 1.8) + 32);
                 } else {
-                    alert("Bạn nhập không phải nhiệt độ")
+                    document.write("Bạn nhập không phải nhiệt độ")
                 }
             }
             chuyenDoiC_K(doC) {
                 if (this.doC > -273) {
                     return this.doC + 273.15
                 } else {
-                    alert("Bạn nhập không phải nhiệt độ")
+                    document.write("Bạn nhập không phải nhiệt độ")
                 }
             }
         }
-        let temperature = new Nhietdo(25);
-        console.log(temperature.chuyenDoiC_F());
-        console.log(temperature.chuyenDoiC_K());
+        let temp = parseInt(prompt("Nhập vào độ c"))
+        let temperature = new Nhietdo(temp);
+        document.write("Độ C - F : " + temperature.chuyenDoiC_F() + "<br>");
+        document.write("Độ C - K : " + temperature.chuyenDoiC_K());
     </script>
 </body>
 
