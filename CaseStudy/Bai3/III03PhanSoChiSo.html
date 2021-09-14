@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+    Giả định rằng không có các phân số bằng nhau trong tập đầu vào
+    Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4], thì kết quả maxFraction(numerators, denominators) = 2. 
+    	5/4 là phân số lớn nhất, có chỉ số là 2.
+ -->
+    <script>
+        let a = [5, 2, 5]
+        let b = [6, 3, 4]
+        let c = []
+        for (let i = 0; i < a.length; i++) {
+            for (let i = 0; i < b.length; i++) {}
+            c.push(parseInt(a[i]) / parseInt(b[i]))
+        }
+        document.write("C = A/B : " + c + "<br>")
+        document.write("A : " + a + "<br>")
+        document.write("B : " + b + "<br>")
+        let maxInNumbers = Math.max.apply(Math, c)
+        document.write("Số lớn nhất trong mảng C : " + maxInNumbers + "<br>")
+        let max = 0;
+        let index = 0
+        for (let m = 0; m < c.length; m++) {
+            if (c[m] > max) {
+                max = c[m];
+                index = m;
+            }
+        }
+        document.write("Phân số lớn nhất trong mảng C là : " + max + " tại vị trí " + index)
+    </script>
+</body>
+
+</html>

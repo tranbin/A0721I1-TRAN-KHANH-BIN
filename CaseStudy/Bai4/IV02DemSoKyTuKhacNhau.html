@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let nhap = prompt("Nhập vào 1 chuỗi")
+        document.write("Chuổi bạn vừa nhập là : " + nhap + "<br>")
+
+        nhap = nhap.split("");
+        for (let i = 0; i < nhap.length; i++) {
+            for (let j = i + 1; j < nhap.length; j++) {
+                if (nhap[j] == nhap[i]) {
+                    nhap.splice(j, 1)
+                }
+            }
+        }
+        document.write("Số ký tự khác nhau của chuổi bạn vừa nhập là : " + nhap.length)
+    </script>
+</body>
+
+</html>

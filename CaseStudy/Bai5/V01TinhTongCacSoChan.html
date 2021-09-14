@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.
+    *
+    * */
+    function matrix( rows, cols, defaultValue){
+
+        var arr = [];
+        let total = 0 ;
+        // Creates all lines:
+        for(var i=0; i < rows; i++){
+
+            // Creates an empty line
+            arr.push([]);
+
+            // Adds cols to the empty line:
+            arr[i].push( new Array(cols));
+
+            for(var j=0; j < cols; j++){
+                // Initializes:
+                arr[i][j] = defaultValue;
+            }
+            if (arr[i][j] % 2 == 0 ){
+                total = total + arr[i][j];
+            }
+            return total;
+        }
+        return arr;
+    }
+    function totalMatrix() {
+    let array =
+    }
+</script>
+</body>
+</html>
