@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        /*    * Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+                        ới m, n là các số nhập từ bàn phím. */
+
+        let mang = []
+        let m = prompt("Bạn hãy nhập chiều dài của mảng");
+        let n = prompt("Bạn hãy nhập các phần tử trong mảng")
+        for (let i = 0; i < m; i++) {
+            mang[i] = []
+            for (let j = 0; j < n; j++) {
+                mang[i][j] = parseInt(prompt("Nhập mảng [" + i + "]" + "-" + "[" + j + "]"))
+            }
+        }
+        document.write(mang + "<br>");
+        let tongArray = caculatorM(mang);
+        document.write("Tổng các số chẵn trong mảng bạn vừa nhập là : " + tongArray)
+            //HÀM TÍNH TỔNG
+        function caculatorM(array) {
+            let dem = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array.length; j++) {
+                    if (array[i][j] % 2 == 0) {
+                        dem = dem + array[i][j]
+                    }
+                }
+            }
+            return dem;
+        }
+    </script>
+</body>
+
+</html>
