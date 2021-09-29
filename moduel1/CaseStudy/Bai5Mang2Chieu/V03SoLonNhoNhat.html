@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let max = 0;
+        let min = 0;
+        let mang = [];
+        let hien_thi = "<br>"
+        let m = prompt("Nhập số m là chiều dài của mảng");
+        let n = prompt("Nhập số n là chiều dài của phần tử con của mảng")
+        for (let i = 0; i < m; i++) {
+            mang[i] = []
+            for (let j = 0; j < n; j++) {
+                mang[i][j] = parseInt(prompt("Nhập vào phần tử con của mảng " + i + "-" + j))
+                hien_thi = hien_thi + mang[i][j] + "&nbsp"
+                if (mang[i][j] > max) {
+                    max = mang[i][j]
+                } else {
+                    min = mang[i][j]
+                }
+            }
+            hien_thi = hien_thi + "<br>"
+        }
+        document.write("Mảng bạn vừa nhập là : " + hien_thi + "<br>") //mảng vừa nhập
+        document.write("Min " + min + "<br>" + "Max " + max)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Câu 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50),
+         Hiển thị ra màn hình trung bình cộng các số lẻ ở vị trí chẵn.
+        Ví dụ: [1,2,3,4,6,7]. Kết quả sau khi thực hiện là: (1+3)/2 =  2
+        
+     -->
+    <script>
+        let dem = 0;
+        let tong = 0
+        let trungBinhCong;
+        let mang = [];
+        let mangViTriChan = [];
+        do {
+            number = parseInt(prompt("Ban hay nhap so phan tu cua mang be hon 50"));
+        }
+        while (number > 50);
+        for (let i = 0; i < number; i++) {
+            mang[i] = parseInt(prompt("Nhập vào mảng số nguyên gồm phần tử thứ " + i));
+        }
+        for (let j = 0; j < mang.length; j++) {
+            if (j % 2 == 0) {
+                mangViTriChan.push(mang[j])
+            }
+        }
+        for (let k = 0; k < mangViTriChan.length; k++) {
+            if (mangViTriChan[k] % 2 != 0) {
+                dem++;
+                tong = tong + mangViTriChan[k]
+                trungBinhCong = tong / dem
+            }
+        }
+        document.write("Mảng bạn vừa nhập là  : " + mang + "<br>");
+        document.write("Mảng số lẽ ở vị trí chẵn là : " + mangViTriChan + "<br>")
+        document.write("Trung bình cộng các số lẻ ở vị trí chẵn là  : " + trungBinhCong)
+    </script>
+</body>
+
+</html>
